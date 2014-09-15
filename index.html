@@ -1,0 +1,30 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1"><title>Hi, I'm Joffily</title><link rel=stylesheet href=assets/stylesheet/main.css><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel=stylesheet type=text/css></head><body><main class=page-container><header class=page-header><div class=page-img-full><div class=img-layer><section class=page-message><h1>Hi, I'm Joffily</h1><h2>A front end developer</h2></section></div></div></header><section class="page-section color-default"><div class=page-grid><h2>Jobs done</h2><article class=p-block><span class="icones smile"></span><h3><a href=http://www.parthenoon.com.br title=Parthenoon target=blank>Parthenoon</a></h3><p>Back end made with python and django framework, Front end responsive and accessible</p><p>This project is a good exemple how we can work with a simplify layout and a very usable interface. Everything working with a good and solid backend programming.</p></article><article class=p-block><span class="icones coffe"></span><h3>Clappr</h3><p>A landing page for Globo's video product. Beautiful design one page responsive interaction.</p><p>Thanks Thiago for give me this opportunity.</p></article></div></section><section class="page-section color-reverse"><div class=page-grid><h2>Why?</h2><p>Why I chose be a front end? Why not be a doctor, engineer or teacher? I can try explain it with much examples but the right answer is because I love do what I do, it is not a profession, for me it is a way to do amazing things.</p></div></section><section class="page-section color-default"><div class=page-grid><h6>made with <span class="icones love"></span> by me</h6></div></section></main><script src=http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js></script><script> 
+	$(document).ready(function() {
+
+		window.App = {};
+
+		App.init = function() {
+			var container = $(".page-img-full");
+			var windowX = $(window).width();
+			var windowH = $(window).height();
+
+			//CSS
+			container.css("display", "block");
+			container.css("width", windowX);
+
+			if (windowH > 720) {
+				container.css("height", windowH);
+			} else {
+				container.css("height", "720px");
+			}
+
+		}
+
+		window.onresize = function(event) {
+			App.init();
+		};
+
+		App.init();
+	});
+
+	</script></body></html>
